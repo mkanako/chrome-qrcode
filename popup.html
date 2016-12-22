@@ -1,0 +1,54 @@
+﻿<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="js/qrcode.js"></script>
+    <script src="js/vue.js"></script>
+    <style>
+    input {
+        width: 100%;
+        margin-right: 10px;
+        flex: 1;
+        outline: none;
+    }
+
+    #app {
+        width: 400px;
+        text-align: center;
+    }
+
+    #top {
+        width: 100%;
+        display: flex;
+    }
+
+    #qr {
+        margin: 10px 0;
+        display: inline-block;
+    }
+
+    #text {
+        text-align: left;
+        overflow: hidden;
+        word-wrap: break-word;
+        border: 1px solid #ccc;
+        padding: 5px;
+    }
+    </style>
+</head>
+
+<body>
+    <div id="app">
+        <div id="top">
+            <input type="text" v-model="qr_str" />
+            <button v-on:click="make">重新生成</button>
+        </div>
+        <div id="qr"></div>
+        <!-- <div id="text">{{qr_str}}</div> -->
+    </div>
+</body>
+<script src="js/app.js"></script>
+
+</html>
