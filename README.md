@@ -1,5 +1,7 @@
 # chrome扩展-二维码生成器
 
+![img](https://github.com/mkanako/chrome_extension_qrcode/blob/master/Screenshot.png?raw=true)
+
 ## Features
 默认生成当前页面二维码，可在输入框修改生成其他字符串的二维码
 二维码大小根据长度自动调整
@@ -7,6 +9,7 @@
 
 ##Dependences
 [qrcodejs](https://github.com/davidshimjs/qrcodejs)
+
 [vue2](https://github.com/vuejs/vue)
 
 ## License
