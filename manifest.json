@@ -17,8 +17,8 @@
    },
    "manifest_version": 2,
    "name": "二维码生成器",
-   "permissions": [ "contextMenus", "tabs", "http://*/*", "http://*/*/*" ],
+   "permissions": [ "contextMenus", "tabs", "http://*/*", "https://*/*" ],
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "0.1",
-   "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+   "version": "0.2"
+   // "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
 }
