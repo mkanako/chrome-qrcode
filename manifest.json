@@ -1,13 +1,13 @@
 {
    // "background": "background.html",
-   "background": {
-      "scripts": ["js/background.js"]
-   },
+//    "background": {
+//       "scripts": ["js/background.js"]
+//    },
    "browser_action": {
       "default_icon": "images/icons/icon_128.png",
       "default_popup": "popup.html"
    },
-   "description": "默认生成当前页面二维码，并可修改生成其他字符串的二维码",
+   "description": "生成当前页面二维码，可进行编辑",
    "icons": {
       "128": "images/icons/icon_128.png",
       "16": "images/icons/icon_16.png",
