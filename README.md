@@ -1,7 +1,7 @@
 # chrome扩展 - 二维码生成器
 
 ## Features
-* 默认生成当前页面二维码，点击二维码进入编辑
+* 默认生成当前页面二维码，点击二维码可进行编辑重新生成
 
 ## Install
 1. [下载](https://github.com/mkanako/chrome-qrcode/archive/master.zip)仓库代码并解压
