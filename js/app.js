@@ -1,63 +1,39 @@
 window.onload = function() {
-    // setTimeout(function() {
     qr_show = document.getElementById('qr-show')
     qr_edit = document.getElementById('qr-edit')
     textarea = document.getElementsByTagName('textarea')[0]
-    qr_str = ''
     chrome.tabs.query({
-        active: true
+        active: true,
+        lastFocusedWindow: true
     }, function(tab) {
-        var url = tab[0].url
-        if (url) {
-            if (RegExp('^chrome-extension:\/\/' + chrome.i18n.getMessage("@@extension_id")).test(url)) {
-                chrome.runtime.sendMessage({
-                    ready: 1
-                }, function(response) {
-                    if (response && response.str) {
-                        qr_str = response.str
-                        make()
-                    }
-                })
-                chrome.runtime.onMessage.addListener(
-                    function(request, sender, sendResponse) {
-                        if (request && request.str) {
-                            qr_str = request.str
-                            make()
-                        }
-                    })
-            } else {
-                qr_str = url
-                make()
-            }
-        }
+        make(tab[0].url)
     })
-    function make() {
-        var str = qr_str.trim()
-        var canvas = document.getElementsByTagName('canvas')
-        if (canvas.length) {
-            document.getElementById('qr').removeChild(canvas[0])
+
+    function toggle(flag) {
+        qr_show.style.display = flag ? 'block' : 'none'
+        qr_edit.style.display = flag ? 'none' : 'block'
+    }
+
+    function make(url) {
+        var str = url.trim()
+        if (str) {
+            var qr = qrcode(0, 'L')
+            qr.addData(str)
+            qr.make()
+            document.getElementById('qr').innerHTML = qr.createImgTag(4, 2)
+            textarea.value = str
         }
-        document.getElementById('qr').appendChild(qrcanvas({
-            data: str,
-            cellSize: 6,
-        }))
-        textarea.value = str
-        qr_show.style.display = 'block'
-        qr_edit.style.display = 'none'
     }
     document.getElementById('confirm').addEventListener('click', function() {
-        qr_str = textarea.value
-        make()
+        make(textarea.value)
+        toggle(1)
     })
     document.getElementById('cancle').addEventListener('click', function() {
-        qr_show.style.display = 'block'
-        qr_edit.style.display = 'none'
+        toggle(1)
     })
     document.getElementById('qr').addEventListener('click', function() {
-        qr_show.style.display = 'none'
-        qr_edit.style.display = 'block'
+        toggle(0)
         textarea.focus()
         textarea.select()
     })
-    // }, 200)
 }

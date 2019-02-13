@@ -1,0 +1,59 @@
+{
+  "_from": "qrcode-generator",
+  "_id": "qrcode-generator@1.4.1",
+  "_inBundle": false,
+  "_integrity": "sha1-v7Z2DgXRLDnfis1goNRZvbL6B1Y=",
+  "_location": "/qrcode-generator",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "qrcode-generator",
+    "name": "qrcode-generator",
+    "escapedName": "qrcode-generator",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "http://registry.npm.taobao.org/qrcode-generator/download/qrcode-generator-1.4.1.tgz",
+  "_shasum": "bfb6760e05d12c39df8acd60a0d459bdb2fa0756",
+  "_spec": "qrcode-generator",
+  "_where": "/Users/kanako/Tools/chrome-qrcode",
+  "author": {
+    "name": "Kazuhiko Arase"
+  },
+  "bugs": {
+    "url": "https://github.com/kazuhikoarase/qrcode-generator/issues"
+  },
+  "bundleDependencies": false,
+  "deprecated": false,
+  "description": "QR Code Generator implementation in JavaScript.",
+  "devDependencies": {
+    "mocha": "^5.2.0"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "homepage": "https://github.com/kazuhikoarase/qrcode-generator#readme",
+  "keywords": [
+    "qr",
+    "qrcode",
+    "generator"
+  ],
+  "license": "MIT",
+  "main": "qrcode.js",
+  "name": "qrcode-generator",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kazuhikoarase/qrcode-generator.git"
+  },
+  "scripts": {
+    "test": "mocha"
+  },
+  "types": "qrcode.d.ts",
+  "version": "1.4.1"
+}

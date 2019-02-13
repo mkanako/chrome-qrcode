@@ -1,24 +1,28 @@
 {
-   // "background": "background.html",
-//    "background": {
-//       "scripts": ["js/background.js"]
-//    },
-   "browser_action": {
-      "default_icon": "images/icons/icon_128.png",
-      "default_popup": "popup.html"
-   },
+   "name": "二维码生成器",
    "description": "生成当前页面二维码，可进行编辑",
+   "offline_enabled": true,
+   "browser_action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+         "16": "images/icons/icon_16.png",
+         "32": "images/icons/icon_32.png",
+         "64": "images/icons/icon_64.png",
+         "48": "images/icons/icon_48.png",
+         "128": "images/icons/icon_128.png"
+       },
+       "default_title": "二维码生成器"
+   },
    "icons": {
-      "128": "images/icons/icon_128.png",
       "16": "images/icons/icon_16.png",
       "32": "images/icons/icon_32.png",
       "64": "images/icons/icon_64.png",
-      "48": "images/icons/icon_48.png"
+      "48": "images/icons/icon_48.png",
+      "128": "images/icons/icon_128.png"
    },
    "manifest_version": 2,
-   "name": "二维码生成器",
-   "permissions": [ "contextMenus", "tabs", "http://*/*", "https://*/*" ],
+   "homepage_url" : "https://github.com/mkanako/chrome-qrcode",
+   "permissions": [ "tabs", "http://*/*", "https://*/*" ],
    "update_url": "https://clients2.google.com/service/update2/crx",
-   "version": "0.2"
-   // "content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'"
+   "version": "0.3"
 }
